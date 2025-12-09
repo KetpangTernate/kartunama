@@ -1,1 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* === BACKGROUND FOTO === */
+body {
+    background: url("img/background.jpg") no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+
+    /* Efek sedikit gelap supaya kontainer lebih jelas */
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.35); /* filter gelap */
+    backdrop-filter: blur(3px);   /* efek blur mewah */
+    z-index: -1;
+}
+
+/* === KOTAK UTAMA === */
+.container {
+    width: 100%;
+    max-width: 420px;
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 25px;
+    padding: 25px;
+    box-shadow: 0 6px 25px rgba(0,0,0,0.35);
+    backdrop-filter: blur(6px);
+}
+
+/* === PROFIL === */
+.profile-section {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 15px auto;
+    border: 6px solid white;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+}
+
+.profile-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.title {
+    font-size: 22px;
+    font-weight: 700;
+    color: #234b4f;
+}
+
+.subtitle {
+    font-size: 18px;
+    font-weight: 600;
+    color: #396c73;
+    margin-top: -5px;
+}
+
+.tagline {
+    font-size: 13px;
+    margin-top: 8px;
+    color: #486e75;
+}
+
+/* === LINK BUTTON === */
+.link-card {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    padding: 14px 0;
+    background: #3d7f8c;
+    color: white;
+    border-radius: 25px;
+    text-decoration: none;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    transition: 0.25s ease;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+}
+
+.btn:hover {
+    background: #315f68;
+    transform: translateY(-3px);
+}
+
+.btn i {
+    font-size: 18px;
+}
+
+/* === FOOTER === */
+.footer {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 12px;
+    color: #315f68;
+}
 
